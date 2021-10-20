@@ -3,7 +3,7 @@ function spookyGhost(){
     console.log(`Boo!!!`);
 }
 
-spookyGhost();
+spookyGhost(); // Boo!!!
 
 console.log(`=======`);
 
@@ -12,16 +12,22 @@ function candy(goal){
     console.log(`${goal} ${goal} ${goal} ${goal}`); 
 }
 
-candy(`Get Candy`);
+candy(`Get Candy`); // Get Candy Get Candy Get Candy Get Candy
 
 console.log(`=======`);
 
 // 3
 function wereWolf(a, b){
-    if (true, true)
-    console.log(`${a} ${b}`);
+    if (a === `Full` && b === `Moon`) // Will not display anything in the terminal if either side of the conditional statement is false.
+    console.log(`ARH-WOOO!`);
+
+    // Using a Ternary
+  // console.log((a === `Full` && b === `Moon`) ? `ARH-WOOO!` : "");
+  
+
 }
-wereWolf(`Full`, `Moon`);
+wereWolf(`Full`, `Moon`); // ARH-WOOO!
+// werewolf(`Crescent`, `Moon`); // Does NOT display anything in the terminal/console
 
 console.log(`=======`);
 
@@ -30,29 +36,42 @@ function halloween(){
     return `October 31st`;
 }
 
-console.log(halloween());
+console.log(halloween()); // October 31st 
 
 console.log(`=======`);
 
 // 5
 function isEnoughCandy(pieces){
-    if (pieces >= `31`){
+    if (pieces >= 31){ // 5 >= 31
         return true;
+    } else if (pieces < 31) {
+        return false;
     }
-    return 
+    
 }
+console.log(isEnoughCandy(31)); // True
+console.log(isEnoughCandy(5)); // False
 
 console.log(`=========`)
 
 // 6
-function candyCounter(num){
+function candyCounter(nums){
     let total = 0;
-    for (n of num) {
-        total = total + n;
+    for(i = 0; i < nums.length; i++){
+        total += nums[i];
+      }
+      return total;
+    
+    // Using a For Of Loop
+  // let total = 0;
+  // for(number of nums){
+  //   total += number;
+  // }
+  // return total;
+    
     }
-    return total;
-}
-console.log(candyCounter([11, 23, 35, 43]));
+
+console.log(candyCounter([15, 23, 35]));
 console.log(candyCounter([99, 199]));
 
 console.log("=======");
@@ -66,7 +85,13 @@ hauntedMansion();
 console.log("=======");
 
 // 8
-ghostbusters = () => "Who you gonna call?"
+ghostbusters = () => "Who you gonna call?";
+
+// Using parentheses
+// ghostbusters = () => (
+//     `Who You Gonna Call?`
+//   );
+
 console.log(ghostbusters());
 
 console.log("=======");
@@ -81,10 +106,9 @@ console.log("=======");
 const costumes = ["Ghost", "Princess", "Pirate"];
 
 // 11b
-let costumeFunction = function (){
-    const upperCostumes = costumes.map(name => name.toUpperCase());
+// let costumeFunction = function (){
+const upperCostumes = costumes.map(i => i.toUpperCase());
     console.log(upperCostumes);
-}
-costumeFunction();
+
 
 console.log(`==========`);
