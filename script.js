@@ -112,3 +112,95 @@ const upperCostumes = costumes.map(i => i.toUpperCase());
 
 
 console.log(`==========`);
+
+// Bonus
+// 12a
+
+const stephenKingMovies = [
+    "The Shining",
+    "Christine",
+    "It",
+    "The Mist",
+    "Creepshow",
+    "Pet Sematary"
+  ];
+  
+  // 12b
+  const twoMovies = stephenKingMovies.filter(i => i.length === 9);
+  console.log(twoMovies); //  'Christine', 'Creepshow' ]
+  
+  console.log("=========");
+  
+  // 13a
+  const halloweenSongs1 = ["Monster Mash", "Thriller"];
+
+  // 13b
+  const halloweenSongs2 = [
+    "I Put A Spell On You",
+    "This Is Halloween",
+    "Ghostbusters"
+  ];
+  
+  // 13c
+  halloweenJukeBox = songs => {
+    const random = Math.floor(Math.random() * songs.length);
+    console.log(songs[random]);
+  }
+  
+  // 13d
+  halloweenJukeBox(halloweenSongs1); // Random item/song from the halloweenSongs1 array
+  halloweenJukeBox(halloweenSongs2); // Random item/song from the halloweenSongs2 array
+
+console.log("=========");
+
+// 14
+caps = string => {
+    let newString = "";
+    for (i = 0; i < string.length; i++){
+      if (i % 2 === 0){
+        newString = newString + string[i].toUpperCase();
+      } else {
+        newString = newString + string[i];
+      }
+    }
+    return newString;
+  }
+  
+  console.log(caps(`Hey`));
+  
+// Using the substring method (Returns part of the string between the start and end indexes that are specified. Also, if a second index is not specified the the rest of the string is included)
+// caps = string => {
+//     for (i = 0; i < string.length; i += 2){
+//       string = string.substring(0, i) + string[i].toUpperCase() + string.substring(i + 1);
+//     }
+//     return string;
+//   }
+//   console.log(caps(`Halloween`));
+  
+//     string = string.substring(0, i) + string[i].toUpperCase() + string.substring(i + 1);
+
+// This example accounts for multi word string arguments (AKA Strings with spaces)...
+/*
+caps = string => {
+  let newString = ``;
+  let num = 0;
+  for (letter of string){
+    if (letter !== " "){
+      if (num % 2 === 0){
+        newString += letter.toUpperCase();
+        num++;
+      } else {
+        newString += letter.toLowerCase();
+        num++;
+      }
+    } else {
+      newString += letter;
+    }
+  }
+  return newString;
+}
+*/
+
+console.log(caps(`Hey`));
+console.log(caps(`Halloween`));
+console.log(caps(`Happy Halloween`));
